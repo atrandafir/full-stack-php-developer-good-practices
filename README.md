@@ -115,7 +115,7 @@ This can benefit the user but the main benefit is that you as a developer can im
 
 # Stay lean, keep things light
 
-# Light development
+## Light development
 
 Well I have a shitty laptop with 8GB of ram.
 
@@ -129,7 +129,7 @@ But for me to use Docker means more RAM and more setup to be done locally just t
 
 My computer then works slow, I the application is loading slow, my developing experience is slow and I'll start to hate it.
 
-# Light deployment
+## Light deployment
 
 Most of my projects can run on a 5USD/mo VPS.
 
