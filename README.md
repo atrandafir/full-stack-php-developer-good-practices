@@ -4,7 +4,7 @@ Welcome to the full-stack-php-developer-good-practices wiki!
 
 This guide provides a list of concepts, ideas and good practices common to full stack php developers and not only.
 
-This is not about development methodologies by more about how to work properly in a way that ensures consistency and good results for your project.
+This is not about development methodologies but more about how to work properly in a way that ensures consistency and good results for your project.
 
 # Autocompleting objects in IDE
 
