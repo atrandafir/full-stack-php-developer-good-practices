@@ -81,6 +81,42 @@ Think of this as a plant. If your plant is put inside a very small pot, it won't
 
 Think of it from a creativity point of view. If you need to make a new drawing, and you have a sheet of paper that already contains lots of other drawings and only one small corner is available, you don't have enough mental space in that corner to express yourself.
 
+# Create service classes for non MVC code
+
+Mostly the code of your application lives inside the Model, the View or the Controller.
+
+But sometimes you have to write lots of logic and it is not fun to see a controller with thousands of lines of code and you can't reutilize that logic in some other part of the application if you have to.
+
+Solution?
+
+Create a "Service class" objetc, for example:
+
+- Imagine your application sends invoices by mail
+- That's a process that needs to be called from different parts of the application, one for sending manual invoices, one for sending recurring invoices
+- Instead of having that code repeated inside multiple controllers, create a class called `services/InvoiceSender.php` and put the logic inside and use it from all the places you need.
+
+# Capture errors when things don't work as expected
+
+If you have a sign up form and for some reason you introduced a new field on the User table that can't be null.
+
+Now the users try to sign up and it fails.
+
+You should capture the validation error and let the user know that the sign-up process is not working.
+
+# Some errors should not break the app
+
+Say your app sends an invoice by mail when a user buys something.
+
+Say the email credentials are not working because they've changed.
+
+Some option would be to throw a fatal error that the SMTP details did not work.
+
+But you're breaking the entire user experience.
+
+Maybe it is better just to log that error in your app's logs and if you want you can tell the user the email could not be sent, but let them continue their journey.
+
+They'll report to you that the invoice is not being sent and you can fix it, but you didn't have to throw a fatal error on screen that breaks everything.
+
 # Provide easy ways to test payments
 
 The name of this item is just an example.
