@@ -172,3 +172,13 @@ Most of my projects can run on a 5USD/mo VPS.
 When I need to deploy my code I just SSH to the VPS, and run a script that will pull from the repo, install composer packages, and apply database migrations. It takes 5 seconds. And if I need to debug anything, is just check the logs.
 
 Some people, setup a big infrastructure on AWS and then setup ElasticBeanstalk that for every new deployment, it needs to rebuild the whole damn project from scratch and it takes 10 minutes and it often fails and you have to lose time to see what the fuck failed and if you want to see the logs you need to do some weird shit. What the fuck people stop making your life difficult if it is not necessary.
+
+# Use the tools your framework provides
+
+Simple example: If you use Yii framework, it provides you with a URL manager that can handle URL generation, and you should use it instead of creating the urls hardcoded by yourself. And so on. Use the tools the framework gives you.
+
+# Deliver production-ready features
+
+You're not just a developer, your job is not just to code a feature and put it online so the client will test it.
+
+Be the client, test it yourself in a real situation, think of use cases, test them all, break it yourself and fix it, only and only then, send it to your client for their testing and feedback.
